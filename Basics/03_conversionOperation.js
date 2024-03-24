@@ -30,4 +30,17 @@ other investigation
 
 let loggedIn = 1
 let booleanLoggedIn = Boolean(loggedIn);
-console.log(booleanLoggedIn);
+//console.log(booleanLoggedIn);
+
+
+// ********************* OPERATION *************************
+
+let str1 = "Ashish";
+let str2 = " Shah";
+let str3 = str1 + str2;
+console.log(str3);
+console.log(str1 + str2)
+console.log(1 + "2");
+console.log("1" + 2);
+console.log("1" + 3 + 3);
+console.log(1 + 3 + "2");  //code interprets L to R
