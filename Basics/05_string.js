@@ -38,5 +38,6 @@ console.log(str4.includes("n")) //case sensitive, check in whole string return: 
 // string interpolation method
 console.log(`Hello this is Ashish shah, ${str3}`)
 
-let testString = "first String"
-console.log(testString.indexOf('S'))
+let testString = "first Strings"
+console.log(testString.indexOf('rings')) //it will index of first string 
+console.log(testString.includes('F')) // takes iput as string and gives output boolean value
