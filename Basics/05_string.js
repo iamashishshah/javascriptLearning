@@ -22,7 +22,7 @@ let str2 = "India "
 let str3 = "Welcome "
 console.log(str1.concat("Papa", str2))
 console.log(str1.concat(str3, str2, str1))
-console.log(str1.concat(str3, str2, str1))   //The concat() function concatenates the string arguments to the calling string and returns a new string.
+console.log("Thisisnew ".concat(str3, str2, str1))   //The concat() function concatenates the string arguments to the calling string and returns a new string.
 // console.log(concat(str3, str2, str1)), can't write like this, there should be any calling function
 
 let str4 = "New string THIS is Ashish Shah O"
