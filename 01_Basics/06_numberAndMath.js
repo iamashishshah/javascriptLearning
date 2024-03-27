@@ -1,6 +1,6 @@
 let score = 100
 let balance = new Number(100)  // we can convert this type of obj number directly into string
-// console.log(score.toString().length);
+console.log(score.toString().length);
 // console.log(balance.toString().length);
 // console.log(balance.toString().indexOf('0'));
 
