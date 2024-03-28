@@ -1,5 +1,5 @@
 // if
-if( "3" !== "2" ){        // 2 == "2" true  , 3 >= "2" true
+if( 3 >= "2" ){        // 2 == "2" true  , 3 >= "2" true
     // console.log(`Testing`);
 }
 
@@ -31,7 +31,7 @@ let score = 1000
 // if (score > 500) console.log(`Score is greater than 500.`); // to end the scope
 // if (score > 500) console.log(`Score is greater than 500.`), if(4>5), console={};  //we can write console only
 
-// if (score > 500) console.log(`Score is greater than 500.`), console.log(`Score is greater than 400.`);
+if (score > 500) console.log(`greater than 500.`), console.log(`greater than 400.`), console.log("greater than 300");
 
 //don't write like above code, 
 
