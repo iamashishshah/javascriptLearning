@@ -2,7 +2,7 @@
 
 //we do like this
 // let b = ["", "", " "]
-// let a = [{}, {}, {}, {}]
+// // let a = [{}, {}, {}, {}]
 // if(b) console.log(b)
 
 const array = [1, 3, 4, 5, 6];
@@ -75,12 +75,12 @@ const myObje = {
     }
 }
 
-for (const key of myObje) {
-    // console.log(key);  // my object is not iterable
+// for (const key of myObje) {
+//     console.log(key);  // my object is not iterable
     
-}
+// }
 
-for (const [key, value] of myObje) {
-    console.log(key);  // my object is not iterable
+// for (const [key, value] of myObje) {
+//     // console.log(key);  // my object is not iterable
 
-}
+// }
