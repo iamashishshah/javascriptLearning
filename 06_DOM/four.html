@@ -18,9 +18,13 @@
             border-radius: 15px;
             font-size: 15px;
         }
-        button:hover{
-            background-color: #FFFAB7;
+        .button1:hover{
+            background-color: green;
             color: black;
+        }
+        .button2:hover{
+            background-color: red;
+            color: white;
         }
         li{
             margin: 5px;
@@ -32,7 +36,8 @@
     <div class="languages">
         <h2>Add Languages</h2>
         <p>Click Button to Add new Language</p>
-        <button onclick="addNewLanguage()">Add New</button>
+        <button class="button1" onclick="addNewLanguage()">Add New</button>
+        <button class="button2" onclick="deleteELement()">Delete</button>
         <ul class="ulist" style="list-style-type: decimal;">
             <li>Javascript</li>
         </ul>
