@@ -24,7 +24,7 @@
     <div class="languages">
         <h2>Add Languages</h2>
         <p>Click Button to Add new Language</p>
-        <button onclick="addNewLanguage">Add New</button>
+        <button onclick="addNewLanguage()">Add New</button>
         <ul class="ulist">
             <li>Javascript</li>
         </ul>
@@ -32,6 +32,11 @@
     
 </body>
 <script>
-    
+const addNewLanguage = () =>{
+    const newLi = document.createElement('li')
+    let lang = prompt("Enter the language: ")
+    newLi.innerHTML = lang
+    document.querySelector('.ulist').appendChild(newLi)
+}
 </script>
 </html>
