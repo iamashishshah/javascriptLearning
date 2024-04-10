@@ -16,7 +16,7 @@
             padding: 15px;
             border: none;
             border-radius: 15px;
-            font-size: 15px;
+            font-size: 25px;
         }
         .button1:hover{
             background-color: green;
@@ -28,7 +28,7 @@
         }
         li{
             margin: 5px;
-            font-size: 20px;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -39,7 +39,7 @@
         <button class="button1" onclick="addNewLanguage()">Add New</button>
         <button class="button2" onclick="deleteELement()">Delete</button>
         <ul class="ulist" style="list-style-type: decimal;">
-            <li>Javascript</li>
+            <li style="font-size: 24px;">Javascript</li>
         </ul>
     </div>
     
@@ -49,11 +49,16 @@ const addNewLanguage = () =>{
     const newLi = document.createElement('li')
     let lang = prompt("Enter the language: ")
     newLi.innerHTML = lang
+    newLi.style.fontSize = "24px"
     document.querySelector('.ulist').appendChild(newLi)
 }
 
 const deleteELement = () =>{
-    
+    let allList = document.querySelectorAll('li')
+    let listArray = Array.from(allList)
+    listArray.pop().remove()
+    // let lastEle = listArray.pop()
+    // lastEle.remove()
 }
 </script>
 </html>
