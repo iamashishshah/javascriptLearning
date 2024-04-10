@@ -48,9 +48,12 @@
 const addNewLanguage = () =>{
     const newLi = document.createElement('li')
     let lang = prompt("Enter the language: ")
-    newLi.innerHTML = lang
-    newLi.style.fontSize = "24px"
-    document.querySelector('.ulist').appendChild(newLi)
+    if (lang != null && lang.trim() != "") {
+        newLi.innerHTML = lang
+        newLi.style.fontSize = "24px"
+        document.querySelector('.ulist').appendChild(newLi)
+    }
+    
 }
 
 const deleteELement = () =>{
