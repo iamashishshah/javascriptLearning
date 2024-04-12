@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: #121212;
+            color: white;
+            font-family: helvetica;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Edit and Remove Elements</h1>
+    <p>Add and Delete Items in Menu</p>
+    <ul style="list-style-type: decimal;">
+        <li>Java</li>
+    </ul>
+</body>
+<script>
+    // add one more list item
+    // const li = document.createElement('li');
+    // li.innerHTML = "JavaScript"
+    // document.querySelector('ul').appendChild(li);
+
+    // we need to add more than one time, so why don't I create a function that will do
+
+    const addLang = (landName) => {
+        const createList = document.createElement('li');
+        createList.textContent = landName;
+        document.querySelector('ul').appendChild(createList);
+    }
+    addLang("javascript")
+    addLang("Golang")
+    addLang("ruby")
+
+    const addOptiLnag = (langName) => {
+        const createList = document.createElement('li')
+        createList.appendChild(document.createTextNode(langName));
+        document.querySelector('ul').appendChild(createList)
+    }
+    addOptiLnag("python")
+    addOptiLnag("python 2.3")
+
+    // Now it's time to edit the values
+    // to edit this, first we need to select that value
+
+     
+    const changeValue = (newValue) =>{
+        let number = parseInt(prompt("Enter the number to change its value: "))
+        let nthElement = document.querySelector("li:nth-child(number)")
+        nthElement.innerHTML = newValue
+    }
+    changeValue("New Value")
+
+
+    // const changeLang = () => {
+    //     const listItems = document.querySelectorAll('li')
+    //     // console.log(listItems)
+    //     let arrayList = Array.from(listItems)
+    //     // console.log(arrayList)
+    //     // console.log(arrayList[0].innerText)
+    //     let changeLang = prompt("Enter the language to change it: ")
+    //     for (let i = 0; i < arrayList.length; i++) {
+    //         if(arrayList[i] === changeLang){
+    //             let newLang = prompt("Enter new Language: ")
+    //             arrayList[i].innerHTML = newLang
+    //         }
+            
+    //     }
+    // }
+    // changeLang()
+
+</script>
+
+</html>
+
+<!--
+    Learnings========================
+    |The appendChild() method of the Node interface adds a node to the end of the list of children of a specified parent node.(that means it will traverse all the elements of that node)
+
+
+    The :nth-child(n) selector matches every element that is the nth child of its parent.
+-->
