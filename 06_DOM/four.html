@@ -51,11 +51,13 @@
 
      
     const changeValue = (newValue) =>{
-        let number = parseInt(prompt("Enter the number to change its value: "))
-        let nthElement = document.querySelector("li:nth-child(number)")
-        nthElement.innerHTML = newValue
+        let nthElement = document.querySelector("li:nth-child(3)")
+        // nthElement.innerHTML = newValue
+        const newLi = document.createElement('li')
+        newLi.textContent = newValue
+        nthElement.replaceWith(newLi)
     }
-    changeValue("New Value")
+    changeValue("Changed Value")
 
 
     // const changeLang = () => {
