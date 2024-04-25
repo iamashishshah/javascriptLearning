@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<style>
+    body {
+        background-color: #141414;
+        color: white;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+</style>
+
+<body>
+    <h1>WonderFull Images</h1>
+    <ul id="images">
+        <li><img src="../1a.jpg" alt="" width="200px" height="200px" id="girlInDark"></li>
+        <li><img src="../1a building.jpg" alt="" width="200px" height="250px" id="building"></li>
+        <li><img src="../1a city.jpg" alt="" width="200px" height="250px" id="city"></li>
+        <li><img src="../1a girl.jpg" alt="" width="200px" height="250px" id="girl"></li>
+        <li><img src="../1a goat.jpg" alt="" width="200px" height="300px" id="goat"></li>
+        <li><a href="https://www.google.com/" id="googleIt">Google it</a></li>
+
+        <!-- <li><img src="../1a goat.jpg" alt="" width="200px" height="250px" id="goat" onclick="alert('Hello, I am goat')"></li> --> 
+        <!-- this is not a good way to write code, it cause in production level -->
+    </ul>
+</body>
+<script>
+    // document.getElementById('goat').onclick = () =>{
+    //     alert("Hello, I am GOAT.")
+    // }
+    // it gives us less features, so we avoid this also
+
+    //attachEvent another method
+    //on
+    
+    // document.getElementById('goat').addEventListener('click', (e) =>{
+    //     // alert('the is best method'),         e is the event object which gives so many values
+    //     console.log(e)
+
+    // }, false)
+
+
+    // this is for event propogation:  false: "eventBubbling"  and true: "eventCapturing"
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget.
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    // make a typing test website
+    
+
+    // document.getElementById('images').addEventListener('click', (e) =>{
+    //     console.log("clicked inside the ul")
+    //     e.stopPropagation()  //we can stop the propagation to going down
+    // }, true)  // it is capturing the event
+    // // it is it set to true that means it is telling, capture krte ja down tk
+
+    // document.getElementById('goat').addEventListener('click', (e) =>{
+    //     e.stopPropagation();       
+    //     console.log("goat clicked")
+    //      // we can stop the propagation to going up
+    // }, false) // it is bubling the events 
+    // // if it is set to false, then it is telling ki bubble krte ja top tk
+
+    // document.getElementById('googleIt').addEventListener('onclick', (e) =>{
+    //    e.preventDefault();  // simply we use preventDefault to prevent it's default Behaviour
+    //    e.stopPropagation();
+    //    console.log("Google Clicked")
+    // }, false)
+
+
+
+    //our task is: click on any image and I'll disappear ***li is a block tag
+
+    document.querySelector('#images').addEventListener('click', (e) =>{
+        console.log(e)
+        console.log(e.target) // it gives us ki from which target it is coming
+        // console.log(e.target.parentNode.parentNode)  // we can nest like this
+        // console.log(e.target.parentNode.parentNode) 
+        
+        if(e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            removeIt.remove();
+        }
+        
+        
+    }, false)
+    // removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
+
+
+type: Represents the type of the event (e.g., "click", "keydown", "mousemove").
+Example: In an event listener for a button click, e.type will be "click".
+
+elapsed: to slip or pass by // Elapsed" is an adjective that means something has passed or gone by
+timestamp: Provides the time (in milliseconds since the epoch) when the event occurred.
+Example: e.timestamp can be used to log the time when a specific event occurred.
+
+defaultPrevented: Indicates whether the default action of the event has been prevented using event.preventDefault().
+Example: In a form submit event, e.defaultPrevented will be true if the submission was prevented.
+
+target: Represents the element on which the event originally occurred.
+Example: In a click event on a button, e.target will be the button element.
+
+currentTarget: Represents the element that the event listener is currently processing.
+Example: In an event listener attached to a parent element with nested children, e.currentTarget will be the parent element.
+
+
+target: This property refers to the element on which the event was originally triggered or originated. It represents the actual element that triggered the event.
+
+currentTarget: This property refers to the element to which the event listener is currently attached. It represents the element that is currently handling the event as it bubbles up or propagates through the DOM hierarchy.
+
+type: Represents the type of the event (e.g., "click", "keydown", "mousemove").
+Example: In an event listener for a button click, e.type will be "click".
+timestamp: Provides the time (in milliseconds since the epoch) when the event occurred.
+Example: e.timestamp can be used to log the time when a specific event occurred.
+defaultPrevented: Indicates whether the default action of the event has been prevented using event.preventDefault().
+Example: In a form submit event, e.defaultPrevented will be true if the submission was prevented.
+target: Represents the element on which the event originally occurred.
+Example: In a click event on a button, e.target will be the button element.
+toElement: Deprecated and no longer used in modern browsers. Previously represented the element the mouse pointer is moving to.
+Example: Not applicable due to deprecation.
+srcElement: Deprecated and no longer used in modern browsers. Previously represented the element that triggered the event.
+Example: Not applicable due to deprecation.
+currentTarget: Represents the element that the event listener is currently processing.
+Example: In an event listener attached to a parent element with nested children, e.currentTarget will be the parent element.
+clientX, clientY: Provide the coordinates (in pixels) of the mouse pointer relative to the viewport's top-left corner.
+Example: In a mousemove event, e.clientX and e.clientY give you the mouse position within the viewport.
+screenX, screenY: Provide the coordinates (in pixels) of the mouse pointer relative to the screen's top-left corner.
+Example: In a mousemove event, e.screenX and e.screenY give you the mouse position within the screen.
+altKey, ctrlKey, shiftKey: Boolean values indicating whether the Alt, Ctrl, or Shift key was pressed during the event.
+Example: In a keydown event for a key other than Alt, Ctrl, or Shift, e.altKey, e.ctrlKey, or e.shiftKey will be true if the respective key is pressed.
+keyCode: Represents the Unicode value of the key pressed during a keyboard event.
+Example: In a keydown event for a key, e.keyCode will provide the Unicode value of the key (e.g., 65 for the "A" key).

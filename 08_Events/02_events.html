@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Events Values</title>
+</head>
+<style>
+    body {
+        background-color: #141414;
+        color: white;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+</style>
+
+<body>
+    <h1>WonderFull Images</h1>
+    <ul id="images">
+        <li><img src="../1a.jpg" alt="" width="200px" height="200px" id="girlInDark"></li>
+    </ul>
+    <a href="https://chat.openai.com/share/2efcef72-450c-4a0c-91ce-18c266ccad63">learn More about event Object</a>
+   
+
+</body>
+<script>
+    // document.getElementById('girlInDark').addEventListener('click',(e) =>{
+    //     e.preventDefault();
+    //     console.log(e)
+    //     console.log(e.target)
+    //     console.log(e.buttons)
+    //     if(e.altKey){ //basically we can do anything after this calling a function, listening an event etc
+    //         console.log("alt key is pressed.")
+    //     }
+    //     // e.stopPropagation();
+    // },false)
+
+    document.getElementById('images').addEventListener('click', (e) => {
+        console.log(e)
+        console.log(e.currentTarget)
+        console.log(e.target)
+    }, false)
+   
+    // **************************EVENTS**************************
+
+    // click
+    // dblclick(double click)
+    // mouseover
+    // mouseout
+    // mousemove
+    // mousedown
+    // mouseup
+    // contextmenu(right - click)
+    // keydown
+    // keyup
+    // keypress
+    // focus
+    // blur
+    // submit
+    // change
+    // input
+    // scroll
+    // load(for <img>, <script>, <link>, and <iframe> elements)
+    // error (for <img>, <script>, and <link> elements)
+    // resize
+</script>
+
+</html>
