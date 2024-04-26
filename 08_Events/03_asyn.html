@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heading</h1>
+    <button id="stop">Stop me</button>
+</body>
+<script>
+    // setTimeout is a method, that also calls API
+    //setTimeout, setInterval, clearInterval, clearTimeout
+    //handler, callback, functions
+    //setTimeout ask for time, the it executes only one time code
+    const fun = () =>{
+        console.log("Ashish Shah")
+        document.querySelector('h1').innerHTML = "learning Javascript"
+    }
+   
+    const stopMe = setTimeout(fun, 3000);
+    // suppose we want to stop the setTimeout, how can we do that??
+    document.querySelector('#stop').addEventListener('click', ()=>{
+        clearTimeout(stopMe)
+        console.log("Stopped")
+    },false)
+
+    //clearTimeout requires reference which setTimeout, you want to stop
+
+    // setTimeout(() =>{
+    //     console.log("Happy Hours ended, Thank you for stopping by.")
+    // }, 1000)
+
+
+    //setInterval ask for time gap, to do any task again and again
+    console.log("Happy Hours!");
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Heading</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let i = 1;
+    const startPrint = (msg) => {
+        console.log(msg, "Hello", i)
+        i++;
+    }
+    let newE
+    const startCall = () => {
+       newE = setInterval(startPrint, 100, "Message")
+    }
+
+    const stopCall = () => {
+        clearInterval(newE)
+    }
+    document.querySelector('#start').addEventListener('click', startCall, false)
+
+    document.querySelector('#stop').addEventListener('click', stopCall, false)
+
+</script>
+
+</html>
