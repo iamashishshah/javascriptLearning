@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerodha Landing Page</title>
+    <style>
+        *{
+            font-family: inter;
+            margin: 0px;
+            padding: 0px;
+            color: #9a9a9a;
+        }
+        body {
+            /* overflow: hidden; */
+            height: auto;
+            width: auto;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 100px 0 100px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+        .small-lists{
+            display: flex;
+            justify-content: space-between;
+        }
+        .list-items{
+            margin: 10px;
+            
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            
+        }
+        h1, p, button{
+            margin: 10px;
+        }
+        button{
+            padding: 10px;
+            background-color: rgb(30, 30, 230);
+            color: white;
+            border: 0px;
+            box-shadow: 2px 2px 10px rgb(81, 69, 69);
+            font-weight: 600;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <div>
+            <li class="list-items"><img src="logo.svg" alt="zerodhaLog" style="width: 200px;"></li>
+        </div>
+        <div class="small-lists">
+            <div class="list-items">Signup</div>
+            <div class="list-items">About</div>
+            <div class="list-items">Products</div>
+            <div class="list-items">Pricing</div>
+            <div class="list-items">Support</div>
+            <div class="list-items"><img src="menu.svg" alt="menu" width="32px"></div>
+        </div>
+    </div>
+    <div class="body-image">
+        <img src="landing.png" alt="tradingChartImage" style="width: 100%;">
+    </div>
+    <div class="footer">
+        <h1 style="color: rgb(30, 28, 28);">Invest in everything</h1>
+        <p>Online platform to invest in stocks, derivatives, mutual funds, and more</p>
+        <button style="width: 150px;">Sign up now</button>
+    </div>
+</body>
+
+</html>
